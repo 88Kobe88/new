@@ -1,0 +1,1 @@
+#list comprehention. funcija, kurioje variable butu iterable tipas ir suskaiciuoti skaiciu besidalinanciu is 3 suma
