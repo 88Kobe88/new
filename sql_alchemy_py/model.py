@@ -5,6 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 engine = create_engine('sqlite:///projektai.db')
 Base = declarative_base()
 
+
 class Car(Base):
     __tablename__ = 'Car'
     id = Column(Integer, primary_key=True)
@@ -20,8 +21,8 @@ class Car(Base):
         self.car_model = car_model
         self.release_date = release_date
 
-
     def __repr__(self):
         return f"{self.id} {self.name} - {self.price}: {self.created_date} {self.car_model} {self.release_date}"
+
 
 Base.metadata.create_all(engine)

@@ -6,8 +6,8 @@ engine = create_engine('sqlite:///projektai.db')
 Session = sessionmaker(bind=engine)
 session = Session()
 
-class DB_3():
 
+class DB_3():
 
     def __init__(self):
         self.session = Session()
@@ -34,4 +34,3 @@ class DB_3():
         value = self.session.query(Car).get(id)
         self.session.delete(value)
         self.session.commit()
-
