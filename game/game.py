@@ -23,8 +23,19 @@ class Game(DB_3):
         else:
             print(f' value {value_id} not found')
 
+    def update_new_value(self):
+        id = int(input('Insert Id number'))
+        car_model = input('Insert car model')
+        price = input('Insert price')
+        self.update_value(new_car_model=car_model, new_price=price, id=id)
 
+    def filter_new_value(self):
+        new_filter = input('Enter something from car')
+        self.filter_by_name(new_filter)
 
+    def get_new_value(self):
+        new_get = input('Enter id number')
+        print(self.get_value_by_id(new_get))
 
     def run(self):
         while True:
@@ -34,10 +45,13 @@ class Game(DB_3):
             elif value == 2:
                 self.delete_values()
             elif value == 3:
+                self.update_new_value()
+            elif value == 4:
+                self.filter_new_value()
+            elif value == 5:
+                self.get_new_value()
+            elif value == 6:
                 print('finish')
                 break
             else:
                 print('insert number 1 or 2')
-
-
-
